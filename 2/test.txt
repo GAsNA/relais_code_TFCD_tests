@@ -1,0 +1,38 @@
+Assignment name    :    ft_list_push_strs
+---------------------------------------------------------------------------------------
+
+#include <unistd.h>
+
+t_list    *ft_list_push_strs(int size, char **strs);
+
+void ft_putstr(char *s)
+{
+    int i = -1;
+    while (s[++i])
+        write(1, s[i], 1);
+}
+
+int main()
+{
+    char *tab[3] = {"42 School", "Hello World", "CoaGames"};
+    // meme test avec l'un des elements a NULL
+    t_list    *list = ft_list_push_strs(3, tab);
+    while (list)
+    {
+        ft_putstr(list->data);
+        printf("\n");
+        list = list->next;
+    }
+    return (0);    
+}
+
+int main()
+{
+    t_list    *list = ft_list_push_strs(42, NULL);
+    while (list)
+    {
+        printf("un element\n");
+        list = list->next;
+    }
+    return (0);
+}

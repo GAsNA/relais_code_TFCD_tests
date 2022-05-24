@@ -1,0 +1,15 @@
+Assignment name    :    ft_printf
+-----------------------------------------------------------------------------------------
+
+#include <stdio.h>
+
+int    ft_printf(const char *, ...);
+
+int main()
+{
+    printf("%i, %i\n", printf("Ceci est un test\n"), ft_printf("Ceci est un test\n"));
+    printf("%i, %i\n", printf("Cette ecole se nomme l'ecole %d.\n", 42), ft_printf("Cette ecole se nomme l'ecole %d\n", 42));
+    printf("%i, %i\n", printf("C'est une journee %s, ici a %d Paris\n", "ensoleillee", 42), ft_printf("C'est une journee %s, ici a %d Paris\n", "ensoleillee", 42));
+    printf("%i, %i\n", printf("L'hexadecimal de 142 est %x.\n", 142), ft_printf("L'hexadecimal de 142 est %x.\n", 142));
+    return (0);
+}
